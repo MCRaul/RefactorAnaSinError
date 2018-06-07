@@ -1,5 +1,4 @@
 import java.util.Collection;
-import java.util.ArrayList;
 import java.util.Iterator;
 
 public class Matricula {
@@ -9,7 +8,9 @@ public class Matricula {
     private String cognoms = "";
     private String dni = "";
     private int curs = 0;
-    private Collection assignatures;
+    //He efectuado un rename
+    private Collection asignaturas;
+    public static float cost = 0;
 
     public Matricula(){}
 
@@ -19,15 +20,13 @@ public class Matricula {
         this.cognoms = cognoms;
         this.dni = dni;
         this.curs = curs;
-        this.assignatures = assignatures;
+        this.asignaturas = assignatures;
     }
-
     public float costMatricula(){
-
-        float cost = 0;
+        float coste = cost;
         int credits = 0;
 
-        for (Iterator iter = assignatures.iterator(); iter.hasNext();) {
+        for (Iterator iter = asignaturas.iterator(); iter.hasNext();) {
             Assignatura element = (Assignatura) iter.next();
             credits = credits + element.credits;
         }
@@ -35,5 +34,4 @@ public class Matricula {
         cost = credits * 15;
         return cost;
     }
-
 }
