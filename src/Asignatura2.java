@@ -1,5 +1,11 @@
 import java.util.ArrayList;
-
+/**
+ * @author Jose Raúl Martínez Vera
+ * @version 07/06/2018
+ */
+/**
+ * Aqui ejecutamos parametros del objeto asignatura
+ */
 public class Asignatura2 {
     public static void main(String[] args) {
         Assignatura ass1 = new Assignatura(1,"Xarxes",150,6,true);
